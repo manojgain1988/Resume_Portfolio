@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+ Contact | Manoj Gain
+{% endblock title %}
+
+{% block contact_status %} Active {% endblock contact_status %}
+
+{% block main_content %}
+
+<div class="container">
+    <h1 class='text-white text-center text-decoration-underline fw-bold mt-3'><span class='text-danger'>Contact </span> Form.</h1>
+    <div class="row my-2">
+
+        <div class="col-6 my-5 text-white">
+            <form action="" method="POST">
+                {% csrf_token %}
+
+                <div class="">
+
+                    <div class="mb-3 ">
+                        <label for="text" class="form-label"> Name :</label>
+                        <input type="text" class="form-control" name="name" placeholder="Name" required>   
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="number" class="form-label">Phone Number:</label>
+                        <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone Number" required>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="email" class="form-label">Email address :</label>
+                        <input type="email" class="form-control " name="email" id="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="message" class="form-label">Message : </label>
+                        <textarea  type="message" class="form-control" id="message" rows="3" placeholder="message"></textarea>
+                      </div>
+
+                    <input type="button" class="form-control text-center" value="Submit">
+  
+                </div>
+            </form>
+        </div>
+
+
+        <div class="col-6 text-center mt-5 text-white">
+            <h1 class="mt-5"> Stay Connected</h1>
+            <h3 class="mt-4">manojgain@gmail.com</h3>
+
+            <div class="socil col-12 text-center mt-5">   
+                <a href="https://www.facebook.com/web.manojgain" target="_blank">
+                    <img src="{% static 'images/facebook.png' %}" alt="facebook.png" height="40" width="40" class="socil ms-3"></i>
+                </a> 
+        
+                <a href="https://web.whatsapp.com/" target="_blank">
+                    <img src="{% static 'images/twitter.jpg' %}" alt="linkendin.png" height="40" width="40" class="socil ms-3"></i>
+                </a>  
+        
+                <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank">
+                    <img src="{% static 'images/bootstrap.png' %}" alt="linkendin.png" height="40" width="40" class="socil ms-3"></i>
+                </a>  
+                
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="{% static 'images/you.png' %}" alt="linkendin.png" height="40" width="40" class="socil ms-3"></i>
+                </a>  
+            </div>
+        </div>
+
+    </div> 
+</div>
+
+{% endblock main_content %}

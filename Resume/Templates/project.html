@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Projects | Manoj Gain
+{% endblock title %}
+
+{% block project_status %}active{% endblock project_status %}
+
+{% block main_content %}
+<h1 class='text-white text-center text-decoration-underline fw-bold mt-3'><span class='text-danger'>My</span> Projects.</h1>
+
+<div class=" row my-2">
+
+    {% for project in projects_show %}
+        <div class="col-6"><br><br><br>
+            <h4 class="text-white">{{project.title}}</h4>
+            <img src="{% static project.path %}" alt="" width="500" height="1000" class='img-fluid'>
+
+        </div> 
+    {% endfor %}
+</div>
+{% endblock main_content %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+ Certifications | Manoj Gain
+{% endblock title %}
+
+{% block certifications_status %} Active {% endblock certifications_status %}
+
+{% block main_content %}
+<h1 class='text-white text-center text-decoration-underline fw-bold mt-3'><span class='text-danger'>My </span> Certification.</h1>
+<div class="row my-2">
+        <div class="jumbtron jumbtron_fluid mt-4">
+            <h1 class="display4">Yu Lab.</h1>
+            <h1 class="display4">HTML, CSS, Bootstrap, WprdPress.</h1>
+        </div>
+        
+        <div class="jumbtron jumbtron_fluid mt-4">
+            <h1 class="display4">Dreamland IT LTD.</h1>
+            <h1 class="display4">Bootstrap, WprdPress, JavaScript.</h1>
+        </div> 
+        
+        <div class="jumbtron jumbtron_fluid mt-4">
+            <h1 class="display4">Flash IT LTD.</h1>
+            <h1 class="display4">Python Django, Rest API.</h1>
+        </div> 
+</div> 
+{% endblock main_content %}

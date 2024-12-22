@@ -1,0 +1,43 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/"><span class="text-danger">Manoj</span>Gain</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+          <li class="nav-item {% block home_status %}{% endblock home_status %}">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+
+          <li class="nav-item {% block about_status %}{% endblock about_status %}">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+
+          <li class="nav-item {% block project_status %}{% endblock project_status %}">
+            <a class="nav-link" href="{% url 'project' %}">Project</a>
+          </li>
+
+          <li class="nav-item {% block experience_status %}{% endblock experience_status %}">
+            <a class="nav-link" href="{% url 'experience' %}">Experience</a>
+          </li>
+
+          <li class="nav-item {% block certification_status %}{% endblock certification_status %}">
+            <a class="nav-link" href="{% url 'certification' %}">Certification</a>
+          </li>
+
+          <li class="nav-item {% block contact_status %}{% endblock contact_status %}">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+          </li>
+
+          <li class="nav-item {% block resume_status %}{% endblock resume_status %}">
+            <a class="nav-link" href="{% url 'resume' %}">Resume</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
